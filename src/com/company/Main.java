@@ -53,37 +53,7 @@ public class Main {
 
     }
 
- /*   public static void heal() {
-        int low = 0;
-        int ran = ;
-        if (heroHeath[l] <= 100 && heroHeath[random] >= 0) {
-            if (heroHeath[5] > 0) {
-                for (int k : heroHeath) {
-                    for (int j = 0; j < heroHeath.length; j++) {
-                        if (k > heroHeath[j]) {
-                            low = j;
-                        }
-                    }
-                }
-            }
-        }
-    }
 
-
-/* boolean allHeroesDead = true;
-
-    for (int i = 0; i < heroesHeath.length; i++){
-        if(heroesHeath[i] > 0){
-             allHeroesDead = false;
-             break;
-        }
-    }
-
-    if(allHeroesDead){
-        System.out.println("Boss won!");
-    }
-    return allHeroesDead;
-*/
     private static void medical() {
             if (heroHeath[random] < 100 && heroHeath[random] > 0) { // Основа ДЗ:
                 if (heroHeath[5] > 0) {
