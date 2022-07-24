@@ -4,7 +4,7 @@ package com.company;
 import java.util.Random;
 
 public class Main {
-    public static String[] heroesAttack = {"Physical", "Magical", "Kinetic", "Golem", "Lucky", "Medical"};
+    public static String[] heroesAttack = {"Physical", "Magical", "Kinetic", "Golem", "Lucky" , "Medical"};
     public static int[] heroHeath = {50, 80, 90, 550, 70, 320};
     public static int[] heroesDamage = {20, 15, 25, 5, 10, 0};
     public static Random r = new Random();
@@ -44,7 +44,21 @@ public class Main {
             System.out.println("Heroes won!");
             return true;
         }
-        if (heroHeath[0] <= 0 && heroHeath[1] <= 0 && heroHeath[2] <= 0) {
+        boolean allHeroesDead = true;
+
+        for (int i = 0; i < heroHeath.length; i++) {
+            if (heroHeath[i] > 0) {
+                allHeroesDead = false;
+                break;
+            }
+        }
+
+        if (allHeroesDead) {
+            System.out.println("Boss won!");
+        }
+        return allHeroesDead;
+    }
+        /*if (heroHeath[0] <= 0 && heroHeath[1] <= 0 && heroHeath[2] <= 0) {
 
             System.out.println("Boss won!");
             return true;
@@ -52,6 +66,25 @@ public class Main {
         return false;
 
     }
+       public static void heal() {
+        int low = 0;
+        int ran = ;
+        if (heroHeath[l] <= 100 && heroHeath[random] >= 0) {
+            if (heroHeath[5] > 0) {
+                for (int k : heroHeath) {
+                    for (int j = 0; j < heroHeath.length; j++) {
+                        if (k > heroHeath[j]) {
+                            low = j;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+*/
 
 
     private static void medical() {
